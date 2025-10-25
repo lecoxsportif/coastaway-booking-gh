@@ -7,33 +7,33 @@ import gardenRoom from "@/assets/room-garden.jpg";
 const rooms = [
   {
     id: 1,
-    name: "Ocean View Suite",
-    description: "Wake up to the sound of waves with panoramic ocean views from your private balcony.",
-    price: 120,
+    name: "Odopa Suite",
+    description: "Our finest room with spectacular sea, garden and pool views. Odopa means 'good love' in Twi. Features a luxurious four-poster king bed and spacious balcony.",
+    price: 87,
     capacity: 2,
     image: oceanRoom,
     icon: Waves,
-    features: ["King Bed", "Ocean Balcony", "Air Conditioning", "En-suite Bathroom"],
+    features: ["Four-Poster King Bed", "Sea & Pool Views", "Private Balcony", "Digital TV", "Work Desk"],
   },
   {
     id: 2,
-    name: "Garden Villa",
-    description: "A peaceful retreat surrounded by lush tropical gardens with traditional Ghanaian touches.",
-    price: 95,
+    name: "Sea View Room",
+    description: "Spacious room designed with Ghanaian heritage in mind, offering beautiful ocean views directly onto one of Ghana's cleanest beaches.",
+    price: 82,
     capacity: 2,
-    image: gardenRoom,
-    icon: Leaf,
-    features: ["Queen Bed", "Garden View", "Ceiling Fan", "Private Terrace"],
+    image: oceanRoom,
+    icon: Waves,
+    features: ["Queen Bed", "Ocean View", "En-suite Bathroom", "Beach Access", "Digital TV"],
   },
   {
     id: 3,
-    name: "Beachfront Cottage",
-    description: "Direct beach access with stunning sunset views and authentic coastal charm.",
-    price: 150,
-    capacity: 4,
-    image: oceanRoom,
-    icon: Waves,
-    features: ["2 Bedrooms", "Beach Access", "Full Kitchen", "Living Area"],
+    name: "Garden View Room",
+    description: "A peaceful sanctuary overlooking lush tropical gardens, designed with traditional Ghanaian aesthetics and modern comfort.",
+    price: 79,
+    capacity: 2,
+    image: gardenRoom,
+    icon: Leaf,
+    features: ["Comfortable Bed", "Garden View", "Pool Access", "Digital TV", "Ceiling Fan"],
   },
 ];
 
@@ -49,9 +49,9 @@ const Rooms = () => {
     <section id="rooms" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl mb-4 text-foreground">Our Accommodations</h2>
+          <h2 className="text-4xl md:text-5xl mb-4 text-foreground">Our Rooms</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Each room is thoughtfully designed to blend comfort with coastal elegance
+            11 spacious rooms designed with Ghanaian heritage in mind, directly on one of Ghana's cleanest beaches in Elmina, Ankwanda
           </p>
         </div>
 
