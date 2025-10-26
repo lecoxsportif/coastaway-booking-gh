@@ -1,36 +1,36 @@
-import { Coffee, Utensils, Wifi, Palmtree, Waves, Car } from "lucide-react";
+import { Waves, Droplets, Sparkles, Paintbrush, Music, Ship } from "lucide-react";
 import breakfastImage from "@/assets/amenity-breakfast.jpg";
 
 const amenities = [
   {
-    icon: Utensils,
-    title: "Restaurant & Bar",
-    description: "Fresh seafood and traditional Ghanaian cuisine with ocean views",
-  },
-  {
-    icon: Coffee,
-    title: "Complimentary Breakfast",
-    description: "Start your day with locally sourced tropical fruits and fresh pastries",
-  },
-  {
-    icon: Wifi,
-    title: "Free Wi-Fi",
-    description: "Stay connected throughout the property",
-  },
-  {
     icon: Waves,
     title: "Beach Access",
-    description: "Private access to pristine sandy beaches",
+    description: "Direct access to pristine beach with soft sand and Atlantic Ocean waters",
   },
   {
-    icon: Palmtree,
-    title: "Garden Tours",
-    description: "Explore our lush tropical gardens and local flora",
+    icon: Droplets,
+    title: "Swimming Pool",
+    description: "Designed by Tera Garden Design, surrounded by vibrant flowers and butterflies",
   },
   {
-    icon: Car,
-    title: "Airport Transfer",
-    description: "Complimentary pickup service from Accra",
+    icon: Sparkles,
+    title: "Full Body Massage",
+    description: "Head-to-toe massage in a tranquil setting to relieve stress and tension",
+  },
+  {
+    icon: Paintbrush,
+    title: "Sip and Paint",
+    description: "Create beautiful masterpieces with our resident artist, Mikanda",
+  },
+  {
+    icon: Music,
+    title: "African Drumming & Dancing",
+    description: "Learn vibrant rhythms with the talented Akomapa team from our village",
+  },
+  {
+    icon: Ship,
+    title: "Local Boat Rides",
+    description: "Join local fishermen for a thrilling boat ride across the sea",
   },
 ];
 
@@ -39,9 +39,9 @@ const Amenities = () => {
     <section id="amenities" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl mb-4 text-foreground">Experience & Amenities</h2>
+          <h2 className="text-4xl md:text-5xl mb-4 text-foreground">See & Do at Afiki</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Everything you need for an unforgettable coastal escape
+            Discover adventure, relaxation, and unforgettable experiences. Best of all, 10% of profits from all activities go towards Afiki Foundation.
           </p>
         </div>
 
@@ -76,14 +76,12 @@ const Amenities = () => {
             />
           </div>
           <div className="space-y-4">
-            <h3 className="text-3xl font-semibold text-foreground">Culinary Delights</h3>
+            <h3 className="text-3xl font-semibold text-foreground">Local Experiences</h3>
             <p className="text-muted-foreground text-lg">
-              Our on-site restaurant serves a fusion of traditional Ghanaian flavors and
-              international cuisine, prepared with fresh, locally sourced ingredients.
+              Immerse yourself in authentic Ghanaian traditions with our unique local experiences led by local people, giving them the opportunity to use their skills to provide for themselves.
             </p>
             <p className="text-muted-foreground text-lg">
-              Enjoy your meals al fresco on our seaside terrace, or indulge in a romantic
-              beachfront dinner under the stars.
+              From village tours to creating your own batik or tie & dye, discover the rich cultural heritage of Ghana's Central Region.
             </p>
           </div>
         </div>
