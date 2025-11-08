@@ -5,22 +5,22 @@ import oceanRoom from "@/assets/room-ocean.jpg";
 import gardenRoom from "@/assets/room-garden.jpg";
 const rooms = [{
   id: 1,
-  name: "Odopa 1+2",
-  description: "Odopa means good love in Twi. Odopa rooms are large with a four poster king bed. Odopa1 at $87 a night, boasts the best sea, garden and pool views at Afiki Beach House, plus a balcony overlooking the pool. Ododpa2 at $71 a night, boasts partial sea views and has no balcony. Odopa rooms are on the first floor of the Afiki beach house.",
-  price: 87,
+  name: "Odopa",
+  description: "Odopa means good love in Twi. Odopa rooms are large with a four poster king bed. Odopa1 at $87 a night, boasts the best sea, garden and pool views at Afiki Beach House, plus a balcony overlooking the pool. Ododpa2 at $71 a night, boasts partial sea views and has no balcony. Odopa rooms are on the first floor of Afiki Beach House.",
+  price: "starting from "71,
   capacity: 3,
   image: oceanRoom,
   icon: Waves,
   features: ["Four Poster King Size Bed", "Balcony (Odopa1 only)", "Sea, Garden & Pool Views (Odopa2 has partial views)", "Smart TV", "Air Condition", "Refrigerator", "Complimentary Tea/Coffee"]
 }, {
   id: 2,
-  name: "Ahoto 2",
-  description: "Ahoto means to be in a state of peace in Twi. This room comes with a queen bed, balcony and great sea, garden and pool views. This room is on the first floor of the Afiki beach house.",
+  name: "Ahoto",
+  description: "Ahoto means to be in a state of peace in Twi. The Ahoto rooms comes with a queen bed and great sea, garden and pool views. At $71 a night, Ahoto1 boasts a Juliet balcony and at $79 a night, Ahoto2, boasts a balcony with great views of the garden, pool and sea. Ahoto is on the first floor of Afiki Beach House.",
   price: 79,
   capacity: 2,
   image: oceanRoom,
   icon: Waves,
-  features: ["Queen Bed", "Balcony", "Sea, Garden & Pool Views", "Digital TV", "Air Condition", "Refrigerator", "Complimentary Tea/Coffee"]
+  features: ["Queen Bed", "Balcony (Juliet balcony to Ahoto1)", "Sea, Garden & Pool Views", "Smart TV", "Air Condition", "Refrigerator", "Complimentary Tea/Coffee"]
 }, {
   id: 3,
   name: "Ahoto 1",
