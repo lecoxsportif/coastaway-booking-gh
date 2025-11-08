@@ -31,9 +31,9 @@ const rooms = [{
   icon: Users,
   features: ["King Size Bed", "Balcony", "Village & Sea Views", "Smart TV", "Air Condition", "Refrigerator", "Complimentary Tea/Coffee"]
 }, {
-  id: 6,
+  id: 4,
   name: "Ebusua",
-  description: "Ebusua means family in Twi. Families of 5 need not be frustrated anymore! Ebusua comes with a double bed, a sofa bed and a bunk bed. This room is on the first floor.",
+  description: "Ebusua means family in Twi. Families of 5 need not be frustrated anymore! Ebusua comes with a double bed, a sofa bed and a bunk bed. This room is on the first floor of Afiki Beach House.",
   price: 55,
   capacity: 5,
   image: gardenRoom,
