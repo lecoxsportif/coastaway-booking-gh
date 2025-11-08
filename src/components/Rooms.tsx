@@ -31,15 +31,6 @@ const rooms = [{
   icon: Waves,
   features: ["Double Bed", "Juliet Balcony", "Sea, Garden & Pool Views", "Digital TV", "Air Condition", "Refrigerator", "Complimentary Tea/Coffee"]
 }, {
-  id: 4,
-  name: "Odopa 2",
-  description: "Odopa 2 is on the first floor of the Afiki beach house. Odopa 2 comes with a four poster king size and a sofa bed. An additional bed can be added to comfortably accommodate 4 people.",
-  price: 71,
-  capacity: 3,
-  image: oceanRoom,
-  icon: Waves,
-  features: ["Four Poster King Size Bed", "Sofa Bed", "Partial Sea Views", "Digital TV", "Air Condition", "Refrigerator", "Complimentary Tea/Coffee"]
-}, {
   id: 5,
   name: "Hwebi",
   description: "Hwebi means have a look in Twi. Hwebi is great for families or friends. Hwebi comes with a king bed and bunk bed. This room is on the first floor with village views and the sea beyond.",
