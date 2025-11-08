@@ -6,48 +6,48 @@ import gardenRoom from "@/assets/room-garden.jpg";
 const rooms = [{
   id: 1,
   name: "Odopa",
-  description: "Odopa means good love in Twi. Odopa rooms are large with a four poster king bed. Odopa1 at $87 a night, boasts the best sea, garden and pool views at Afiki Beach House, plus a balcony overlooking the pool. Ododpa2 at $71 a night, boasts partial sea views and has no balcony. Odopa rooms are on the first floor of Afiki Beach House.",
+  description: "Odopa means 'good love' in Twi. Odopa rooms are large with a four poster king-size bed. Odopa1 at $87 a night, boasts the best sea, garden and pool views at Afiki Beach House, plus a balcony overlooking the pool. Ododpa2 at $71 a night, boasts partial sea views and has no balcony. Odopa rooms are on the first floor of Afiki Beach House.",
   price: 71,
   capacity: 3,
   image: oceanRoom,
   icon: Waves,
-  features: ["Four Poster King Size Bed", "Balcony (Odopa1 only)", "Sea, Garden & Pool Views (Odopa2 has partial views)", "Smart TV", "Air Condition", "Refrigerator", "Complimentary Tea/Coffee"]
+  features: ["Four Poster King-Size Bed", "Balcony (Odopa1 only)", "Sea, Garden & Pool Views (Odopa2 has partial views)", "Smart TV", "Air Condition", "Refrigerator", "Complimentary Tea/Coffee"]
 }, {
   id: 2,
   name: "Ahoto",
-  description: "Ahoto means to be in a state of peace in Twi. The Ahoto rooms comes with a queen bed and great sea, garden and pool views. At $71 a night, Ahoto1 boasts a Juliet balcony and at $79 a night, Ahoto2, boasts a balcony with great views of the garden, pool and sea. Ahoto is on the first floor of Afiki Beach House.",
+  description: "Ahoto means 'to be in a state of peace' in Twi. The Ahoto rooms comes with a queen-size bed and great sea, garden and pool views. At $71 a night, Ahoto1 boasts a Juliet balcony and at $79 a night, Ahoto2, boasts a balcony with great views of the garden, pool and sea. Ahoto is on the first floor of Afiki Beach House.",
   price: 71,
   capacity: 2,
   image: oceanRoom,
   icon: Waves,
-  features: ["Queen Bed", "Balcony (Juliet balcony to Ahoto1)", "Sea, Garden & Pool Views", "Smart TV", "Air Condition", "Refrigerator", "Complimentary Tea/Coffee"]
+  features: ["Queen-Size Bed", "Balcony (Juliet balcony to Ahoto1)", "Sea, Garden & Pool Views", "Smart TV", "Air Condition", "Refrigerator", "Complimentary Tea/Coffee"]
 }, {
   id: 3,
   name: "Hwebi",
-  description: "Hwebi means have a look in Twi. Hwebi is a tastefully-designed room with village views and the sea beyond. Feel the sea breeze - watch life go by from your Hwebi balcony. Hwebi comes with a king bed. This room is on the first floor of Afiki Beach House.",
+  description: "Hwebi means 'have a look' in Twi. Hwebi is a tastefully-designed room with village views and the sea beyond. Feel the sea breeze - watch life go by from your Hwebi balcony. Hwebi comes with a king-size bed. This room is on the first floor of Afiki Beach House.",
   price: 69,
   capacity: 3,
   image: gardenRoom,
   icon: Users,
-  features: ["King Size Bed", "Balcony", "Village & Sea Views", "Smart TV", "Air Condition", "Refrigerator", "Complimentary Tea/Coffee"]
+  features: ["King-Size Bed", "Balcony", "Village & Sea Views", "Smart TV", "Air Condition", "Refrigerator", "Complimentary Tea/Coffee"]
 }, {
   id: 4,
   name: "Ebusua",
-  description: "Ebusua means family in Twi. Families of 5 need not be frustrated anymore! Ebusua comes with a double bed, a sofa bed and a bunk bed. This room is on the first floor of Afiki Beach House.",
+  description: "Ebusua means 'family' in Twi. Families of 5 need not be frustrated anymore! Ebusua comes with a double bed, a sofa bed and a bunk bed. This room is on the first floor of Afiki Beach House.",
   price: 55,
   capacity: 5,
   image: gardenRoom,
   icon: Users,
   features: ["Double Bed", "Sofa Bed", "Bunk Bed", "Sleeps 5", "Digital TV", "Air Condition", "Refrigerator"]
 }, {
-  id: 7,
+  id: 5,
   name: "Akyedi",
-  description: "Akyedi means gift in Twi. There are 4 Akyedi rooms on the ground floor with queen/king size bed. Some rooms come with a sofa bed and can sleep 3 persons. Others come with a seating area.",
+  description: "Akyedi means 'gift' in Twi. All our Akyedi rooms are on the ground floor of Afiki Beach House. There are 4 Akyedi rooms: Akyedi1 comes with a king-size bed and a sofa bed. Akyedi2 comes with a king-size bed. Akyedi3 comes with a queen-size bed. Akyedi4 comes with a queen-size bed and sea views.",
   price: 45,
-  capacity: 2,
+  capacity: 3,
   image: gardenRoom,
   icon: Leaf,
-  features: ["Queen/King Size Bed", "Ground Floor", "Air Condition", "Ceiling Fan", "Refrigerator (on request)", "Free Wifi"]
+  features: ["King-Size Bed (Akyedi 1 + 2)", "Queen-Size Bed (Akyedi 3 + 4)", "Ground Floor", "Air Condition", "Ceiling Fan", "Refrigerator (on request)"]
 }];
 const Rooms = () => {
   const scrollToBooking = () => {
