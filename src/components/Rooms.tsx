@@ -16,29 +16,20 @@ const rooms = [{
   id: 2,
   name: "Ahoto",
   description: "Ahoto means to be in a state of peace in Twi. The Ahoto rooms comes with a queen bed and great sea, garden and pool views. At $71 a night, Ahoto1 boasts a Juliet balcony and at $79 a night, Ahoto2, boasts a balcony with great views of the garden, pool and sea. Ahoto is on the first floor of Afiki Beach House.",
-  price: 79,
+  price: 71,
   capacity: 2,
   image: oceanRoom,
   icon: Waves,
   features: ["Queen Bed", "Balcony (Juliet balcony to Ahoto1)", "Sea, Garden & Pool Views", "Smart TV", "Air Condition", "Refrigerator", "Complimentary Tea/Coffee"]
 }, {
   id: 3,
-  name: "Ahoto 1",
-  description: "Ahoto 1 comes with a double bed, Juliet balcony and great sea, garden and pool views. This room is on the first floor of the Afiki beach house.",
-  price: 71,
-  capacity: 2,
-  image: gardenRoom,
-  icon: Waves,
-  features: ["Double Bed", "Juliet Balcony", "Sea, Garden & Pool Views", "Digital TV", "Air Condition", "Refrigerator", "Complimentary Tea/Coffee"]
-}, {
-  id: 5,
   name: "Hwebi",
-  description: "Hwebi means have a look in Twi. Hwebi is great for families or friends. Hwebi comes with a king bed and bunk bed. This room is on the first floor with village views and the sea beyond.",
-  price: 60,
-  capacity: 4,
+  description: "Hwebi means have a look in Twi. Hwebi is a tastefully-designed room with village views and the sea beyond. Feel the sea breeze - watch life go by from your Hwebi balcony. Hwebi comes with a king bed. This room is on the first floor of Afiki Beach House.",
+  price: 69,
+  capacity: 3,
   image: gardenRoom,
   icon: Users,
-  features: ["King Size Bed", "Bunk Bed", "Village & Sea Views", "Digital TV", "Air Condition", "Refrigerator"]
+  features: ["King Size Bed", "Balcony", "Village & Sea Views", "Smart TV", "Air Condition", "Refrigerator", "Complimentary Tea/Coffee"]
 }, {
   id: 6,
   name: "Ebusua",
@@ -81,7 +72,7 @@ const Rooms = () => {
                 <div className="relative h-64 overflow-hidden">
                   <img src={room.image} alt={room.name} className="w-full h-full object-cover transition-smooth hover:scale-110" />
                   <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-soft">
-                    starting from ${room.price}/night
+                    from ${room.price}/night
                   </div>
                 </div>
                 <CardContent className="p-6">
