@@ -5,10 +5,10 @@ import oceanRoom from "@/assets/room-ocean.jpg";
 import gardenRoom from "@/assets/room-garden.jpg";
 const rooms = [{
   id: 1,
-  name: "Odopa 1",
+  name: "Odopa 1+2",
   description: "Odopa means good love in Twi. Odopa rooms are large with a four poster king bed. Odopa1 at $87 a night, boasts the best sea, garden and pool views at Afiki Beach House, plus a balcony overlooking the pool. Ododpa2 at $71 a night, boasts partial sea views and has no balcony. Odopa rooms are on the first floor of the Afiki beach house.",
   price: 87,
-  capacity: 2,
+  capacity: 3,
   image: oceanRoom,
   icon: Waves,
   features: ["Four Poster King Size Bed", "Balcony (Odopa1 only)", "Sea, Garden & Pool Views (Odopa2 has partial views)", "Smart TV", "Air Condition", "Refrigerator", "Complimentary Tea/Coffee"]
