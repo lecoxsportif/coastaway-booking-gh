@@ -7,7 +7,7 @@ const rooms = [{
   id: 1,
   name: "Odopa",
   description: "Odopa means good love in Twi. Odopa rooms are large with a four poster king bed. Odopa1 at $87 a night, boasts the best sea, garden and pool views at Afiki Beach House, plus a balcony overlooking the pool. Ododpa2 at $71 a night, boasts partial sea views and has no balcony. Odopa rooms are on the first floor of Afiki Beach House.",
-  price: "starting from 71",
+  price: 71,
   capacity: 3,
   image: oceanRoom,
   icon: Waves,
@@ -81,7 +81,7 @@ const Rooms = () => {
                 <div className="relative h-64 overflow-hidden">
                   <img src={room.image} alt={room.name} className="w-full h-full object-cover transition-smooth hover:scale-110" />
                   <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-soft">
-                    ${room.price}/night
+                    starting from ${room.price}/night
                   </div>
                 </div>
                 <CardContent className="p-6">
