@@ -59,17 +59,10 @@ const Amenities = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div>
+          <div className="space-y-6">
             <img src={breakfastImage} alt="Fresh breakfast spread" className="rounded-lg shadow-elevated w-full h-full object-cover" />
-          </div>
-          <div className="space-y-4">
-            <h2 className="text-4xl md:text-5xl mb-4 text-foreground">Local Experiences</h2>
-            <p className="text-muted-foreground text-lg">
-              Immerse yourself in authentic Ghanaian traditions with our unique local experiences led by local people, giving them the opportunity to use their skills to provide for themselves.
-            </p>
-            <p className="text-muted-foreground text-lg">From village tours to creating your own batik or tie & dye to a boat ride with a local fisherman, discover the rich cultural heritage of Ghana's Central Region.</p>
             
-            <div className="flex gap-4 p-6 bg-card rounded-lg shadow-soft mt-6">
+            <div className="flex gap-4 p-6 bg-card rounded-lg shadow-soft">
               <div className="flex-shrink-0">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                   <Slack className="w-6 h-6 text-primary" />
@@ -80,6 +73,13 @@ const Amenities = () => {
                 <p className="text-muted-foreground">Create your own batik art. Fun activity. Take home your creation!</p>
               </div>
             </div>
+          </div>
+          <div className="space-y-4">
+            <h2 className="text-4xl md:text-5xl mb-4 text-foreground">Local Experiences</h2>
+            <p className="text-muted-foreground text-lg">
+              Immerse yourself in authentic Ghanaian traditions with our unique local experiences led by local people, giving them the opportunity to use their skills to provide for themselves.
+            </p>
+            <p className="text-muted-foreground text-lg">From village tours to creating your own batik or tie & dye to a boat ride with a local fisherman, discover the rich cultural heritage of Ghana's Central Region.</p>
           </div>
         </div>
       </div>
