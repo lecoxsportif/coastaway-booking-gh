@@ -47,7 +47,7 @@ const BookingForm = () => {
                   <Input id="name" placeholder="John Doe" required />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
+                  <Label htmlFor="email">E-mail</Label>
                   <Input id="email" type="email" placeholder="john@example.com" required />
                 </div>
               </div>
@@ -64,7 +64,7 @@ const BookingForm = () => {
                       <SelectValue placeholder="Select a room" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="ocean">Ocean View Suite - $120/night</SelectItem>
+                      <SelectItem value="Odopa">Odopa - $71/night</SelectItem>
                       <SelectItem value="garden">Garden Villa - $95/night</SelectItem>
                       <SelectItem value="beach">Beachfront Cottage - $150/night</SelectItem>
                     </SelectContent>
