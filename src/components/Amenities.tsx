@@ -1,4 +1,4 @@
-import { Waves, Droplets, Sparkles, Paintbrush, Music, Ship, Utensils, Slack, Piggy } from "lucide-react";
+import { Waves, Droplets, Sparkles, Paintbrush, Music, Ship, Utensils, Slack, ChessKnight } from "lucide-react";
 import breakfastImage from "@/assets/amenity-breakfast.jpg";
 const amenities = [{
   icon: Waves,
@@ -33,7 +33,7 @@ const amenities = [{
   title: "Batik Making",
   description: "Create your own batik art. Fun activity. Take home your creation!"  
 }, {
-  icon: Piggy,
+  icon: ChessKnight,
   title: "Horse Riding",
   description: "Nothing quite like a beach horse ride!"  
 }];
