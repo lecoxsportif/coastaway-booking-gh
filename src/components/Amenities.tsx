@@ -67,7 +67,7 @@ const Amenities = () => {
             <img src={breakfastImage} alt="Fresh breakfast spread" className="rounded-lg shadow-elevated w-full h-full object-cover" />
           </div>
           <div className="space-y-4">
-            <h3 className="text-3xl font-semibold text-foreground">Local Experiences</h3>
+            <h2 className="text-4xl md:text-5xl mb-4 text-foreground">Local Experiences</h2>
             <p className="text-muted-foreground text-lg">
               Immerse yourself in authentic Ghanaian traditions with our unique local experiences led by local people, giving them the opportunity to use their skills to provide for themselves.
             </p>
