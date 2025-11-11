@@ -1,15 +1,15 @@
-import { Waves, Droplets, Sparkles, Paintbrush, Music, Ship, Utensils, Slack, PiggyBank } from "lucide-react";
+import { TreePalm, WavesLadder, Handshake, Paintbrush, Drum, Ship, Utensils, Slack, PiggyBank } from "lucide-react";
 import breakfastImage from "@/assets/amenity-breakfast.jpg";
 const amenities = [{
-  icon: Waves,
+  icon: TreePalm,
   title: "Beach Access",
   description: "Direct access to pristine beach with soft sand and Atlantic Ocean waters"
 }, {
-  icon: Droplets,
+  icon: WavesLadder,
   title: "Swimming Pool",
   description: "Designed by Tera Garden Design, surrounded by vibrant flowers and butterflies"
 }, {
-  icon: Sparkles,
+  icon: Handshake,
   title: "Full Body Massage",
   description: "Head-to-toe massage in a tranquil setting to relieve stress and tension"
 }, {
@@ -17,7 +17,7 @@ const amenities = [{
   title: "Sip and Paint",
   description: "Create beautiful masterpieces with our resident artist, Mikanda"
 }, {
-  icon: Music,
+  icon: Drum,
   title: "African Drumming & Dancing",
   description: "Drumming and dancing are deeply embedded in the Ghanaian tradition. Learn about the talking drum and its corresponding dance. This isn’t just a drumming lesson – it’s an immersion into history and culture. A lived experience like no other."
 }, {
