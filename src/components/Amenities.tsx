@@ -31,11 +31,11 @@ const amenities = [{
 }, {
   icon: Slack,
   title: "Batik Making",
-  description: "Create your own batik art. Fun activity. Take home your creation!"  
+  description: "Create your own batik art. Fun activity. Take home your creation!"
 }, {
   icon: PiggyBank,
   title: "Horse Riding",
-  description: "Nothing quite like a beach horse ride!"  
+  description: "Nothing quite like a beach horse ride!"
 }];
 const Amenities = () => {
   return <section id="amenities" className="py-20 bg-muted/30">
@@ -71,9 +71,7 @@ const Amenities = () => {
             <p className="text-muted-foreground text-lg">
               Immerse yourself in authentic Ghanaian traditions with our unique local experiences led by local people, giving them the opportunity to use their skills to provide for themselves.
             </p>
-            <p className="text-muted-foreground text-lg">
-              From village tours to creating your own batik or tie & dye, discover the rich cultural heritage of Ghana's Central Region.
-            </p>
+            <p className="text-muted-foreground text-lg">From village tours to creating your own batik or tie & dye to a boat ride with a local fisherman, discover the rich cultural heritage of Ghana's Central Region.</p>
           </div>
         </div>
       </div>
