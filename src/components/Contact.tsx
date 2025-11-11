@@ -18,9 +18,13 @@ const Contact = () => {
             </div>
             <h3 className="text-xl font-semibold mb-2 text-foreground">Location</h3>
             <p className="text-muted-foreground">
-              Apostle Baidoo Lane, Ankwanda, Elmina,
+              Apostle Baidoo Lane, 
               <br />
-              Central Region, Ghana, CR-0240-4242
+              Ankwanda, Elmina,
+              <br />
+              Central Region, Ghana,
+              <br />
+              CR-0240-4242
             </p>
           </div>
 
@@ -30,9 +34,9 @@ const Contact = () => {
             </div>
             <h3 className="text-xl font-semibold mb-2 text-foreground">Phone</h3>
             <p className="text-muted-foreground">
-              Tel: +233 204 539 426 / +233 243 871 142
+              Tel: +233 204539426 / +233 243871142
               <br />
-              Whatsapp: +233 204 539 426
+              Whatsapp: +233 204539426
               <br />
               Available 24/7
             </p>
