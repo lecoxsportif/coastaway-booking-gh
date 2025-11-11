@@ -32,18 +32,6 @@ const amenities = [{
   icon: PiggyBank,
   title: "Horse Riding",
   description: "Nothing quite like a beach horse ride!"
-}, {
-  icon: PiggyBank,
-  title: "Ancestors Tour",
-  description: "Last Bath River (Assin Manso). Walk where our Ancestors walked and feel the waters they had their last bath in. Includes lunch at Adom Villa in Assin Damang."
-}, {
-  icon: PiggyBank,
-  title: "Castles & Town Tour",
-  description: "Visit Unesco World Heritage Sites, Cape Coast Castle and Elmina Castle. It is a heavy history but one we must know to never repeat again. Tour includes Cape Coast and Elmina Township."
-}, {
-  icon: PiggyBank,
-  title: "Central Region Classic",
-  description: "Visit Kakum National Park, Cape Coast and Elmina Castles. Includes a free stop over at Hans Cottage to visit their gentle crocodiles. We recommend lunch at Hans Cottage at your cost."
 }];
 const Amenities = () => {
   return <section id="amenities" className="py-20 bg-muted/30">
@@ -83,6 +71,42 @@ const Amenities = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-2 text-foreground">Batik Making</h3>
                 <p className="text-muted-foreground">Create your own batik art. Fun activity. Take home your creation!</p>
+              </div>
+            </div>
+
+            <div className="flex gap-4 p-6 bg-card rounded-lg shadow-soft">
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <PiggyBank className="w-6 h-6 text-primary" />
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2 text-foreground">Ancestors Tour</h3>
+                <p className="text-muted-foreground">Last Bath River (Assin Manso). Walk where our Ancestors walked and feel the waters they had their last bath in. Includes lunch at Adom Villa in Assin Damang.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-4 p-6 bg-card rounded-lg shadow-soft">
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <PiggyBank className="w-6 h-6 text-primary" />
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2 text-foreground">Castles & Town Tour</h3>
+                <p className="text-muted-foreground">Visit Unesco World Heritage Sites, Cape Coast Castle and Elmina Castle. It is a heavy history but one we must know to never repeat again. Tour includes Cape Coast and Elmina Township.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-4 p-6 bg-card rounded-lg shadow-soft">
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <PiggyBank className="w-6 h-6 text-primary" />
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2 text-foreground">Central Region Classic</h3>
+                <p className="text-muted-foreground">Visit Kakum National Park, Cape Coast and Elmina Castles. Includes a free stop over at Hans Cottage to visit their gentle crocodiles. We recommend lunch at Hans Cottage at your cost.</p>
               </div>
             </div>
           </div>
