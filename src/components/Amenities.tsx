@@ -1,4 +1,4 @@
-import { Waves, Droplets, Sparkles, Paintbrush, Music, Ship, Utensils, Slack, "Chess-Knight" } from "lucide-react";
+import { Waves, Droplets, Sparkles, Paintbrush, Music, Ship, Utensils, Slack, chess-knight } from "lucide-react";
 import breakfastImage from "@/assets/amenity-breakfast.jpg";
 const amenities = [{
   icon: Waves,
