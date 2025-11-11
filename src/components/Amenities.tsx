@@ -19,7 +19,7 @@ const amenities = [{
 }, {
   icon: Music,
   title: "African Drumming & Dancing",
-  description: "Learn vibrant rhythms with the talented Akomapa team from our village"
+  description: "Drumming and dancing are deeply embedded in the Ghanaian tradition. Learn about the talking drum and its corresponding dance. This isn’t just a drumming lesson – it’s an immersion into history and culture. A lived experience like no other."
 }, {
   icon: Ship,
   title: "Local Boat Rides",
