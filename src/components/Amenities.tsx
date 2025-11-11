@@ -1,11 +1,11 @@
-import { TreePalm, WavesLadder, Handshake, Paintbrush, Drum, Ship, Utensils, Slack, PiggyBank } from "lucide-react";
+import { TreePalm, Waves, Handshake, Paintbrush, Drum, Ship, Utensils, Slack, PiggyBank } from "lucide-react";
 import breakfastImage from "@/assets/amenity-breakfast.jpg";
 const amenities = [{
   icon: TreePalm,
   title: "Beach Access",
   description: "Direct access to pristine beach with soft sand and Atlantic Ocean waters"
 }, {
-  icon: WavesLadder,
+  icon: Waves,
   title: "Swimming Pool",
   description: "Designed by Tera Garden Design, surrounded by vibrant flowers and butterflies"
 }, {
