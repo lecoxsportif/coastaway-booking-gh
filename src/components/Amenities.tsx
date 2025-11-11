@@ -79,7 +79,7 @@ const Amenities = () => {
             <p className="text-muted-foreground text-lg">
               Immerse yourself in authentic Ghanaian traditions with our unique local experiences led by local people, giving them the opportunity to use their skills to provide for themselves.
             </p>
-            <p className="text-muted-foreground text-lg">From village tours to creating your own batik or tie & dye to a boat ride with a local fisherman, discover the rich cultural heritage of Ghana's Central Region.</p>
+            <p className="text-muted-foreground text-lg">From village tours to creating your own batik or experience one of our local tours, discover the rich cultural heritage of Ghana's Central Region.</p>
           </div>
         </div>
       </div>
