@@ -18,9 +18,9 @@ const Contact = () => {
             </div>
             <h3 className="text-xl font-semibold mb-2 text-foreground">Location</h3>
             <p className="text-muted-foreground">
-              Coastal Road, Busua Beach
+              Apostle Baidoo Lane, Ankwanda, Elmina,
               <br />
-              Western Region, Ghana
+              Central Region, Ghana, CR-0240-4242
             </p>
           </div>
 
@@ -30,7 +30,9 @@ const Contact = () => {
             </div>
             <h3 className="text-xl font-semibold mb-2 text-foreground">Phone</h3>
             <p className="text-muted-foreground">
-              +233 XX XXX XXXX
+              Tel: +233 204 539 426 / +233 243 871 142
+              <br />
+              Whatsapp: +233 204 539 426
               <br />
               Available 24/7
             </p>
@@ -40,11 +42,9 @@ const Contact = () => {
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
               <Mail className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-foreground">Email</h3>
+            <h3 className="text-xl font-semibold mb-2 text-foreground">E-mail</h3>
             <p className="text-muted-foreground">
-              info@seasidehaven.com
-              <br />
-              reservations@seasidehaven.com
+              afikibeachhouse@gmail.com
             </p>
           </div>
         </div>
