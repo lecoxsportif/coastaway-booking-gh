@@ -32,6 +32,18 @@ const amenities = [{
   icon: PiggyBank,
   title: "Horse Riding",
   description: "Nothing quite like a beach horse ride!"
+}, {
+  icon: PiggyBank,
+  title: "Ancestors Tour",
+  description: "Last Bath River (Assin Manso). Walk where our Ancestors walked and feel the waters they had their last bath in. Includes lunch at Adom Villa in Assin Damang."
+}, {
+  icon: PiggyBank,
+  title: "Castles & Town Tour",
+  description: "Visit Unesco World Heritage Sites, Cape Coast Castle and Elmina Castle. It is a heavy history but one we must know to never repeat again. Tour includes Cape Coast and Elmina Township."
+}, {
+  icon: PiggyBank,
+  title: "Central Region Classic",
+  description: "Visit Kakum National Park, Cape Coast and Elmina Castles. Includes a free stop over at Hans Cottage to visit their gentle crocodiles. We recommend lunch at Hans Cottage at your cost."
 }];
 const Amenities = () => {
   return <section id="amenities" className="py-20 bg-muted/30">
