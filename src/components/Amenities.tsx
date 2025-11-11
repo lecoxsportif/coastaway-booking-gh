@@ -1,4 +1,4 @@
-import { Waves, Droplets, Sparkles, Paintbrush, Music, Ship } from "lucide-react";
+import { Waves, Droplets, Sparkles, Paintbrush, Music, Ship, Utensils, Slack, "Chess-Knight" } from "lucide-react";
 import breakfastImage from "@/assets/amenity-breakfast.jpg";
 const amenities = [{
   icon: Waves,
@@ -24,6 +24,18 @@ const amenities = [{
   icon: Ship,
   title: "Local Boat Rides",
   description: "Join local fishermen for a thrilling boat ride across the sea"
+}, {
+  icon: Utensils,
+  title: "Local Cooking",
+  description: "Our kitchen team will guide you in making your favourite Ghanaian dish then enjoy eating your creation."
+}, {
+  icon: Slack,
+  title: "Batik Making",
+  description: "Create your own batik art. Fun activity. Take home your creation!"  
+}, {
+  icon: Chess-Knight,
+  title: "Horse Riding",
+  description: "Nothing quite like a beach horse ride!"  
 }];
 const Amenities = () => {
   return <section id="amenities" className="py-20 bg-muted/30">
