@@ -29,10 +29,6 @@ const amenities = [{
   title: "Local Cooking",
   description: "Our kitchen team will guide you in making your favourite Ghanaian dish then enjoy eating your creation."
 }, {
-  icon: Slack,
-  title: "Batik Making",
-  description: "Create your own batik art. Fun activity. Take home your creation!"
-}, {
   icon: PiggyBank,
   title: "Horse Riding",
   description: "Nothing quite like a beach horse ride!"
@@ -72,6 +68,18 @@ const Amenities = () => {
               Immerse yourself in authentic Ghanaian traditions with our unique local experiences led by local people, giving them the opportunity to use their skills to provide for themselves.
             </p>
             <p className="text-muted-foreground text-lg">From village tours to creating your own batik or tie & dye to a boat ride with a local fisherman, discover the rich cultural heritage of Ghana's Central Region.</p>
+            
+            <div className="flex gap-4 p-6 bg-card rounded-lg shadow-soft mt-6">
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Slack className="w-6 h-6 text-primary" />
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2 text-foreground">Batik Making</h3>
+                <p className="text-muted-foreground">Create your own batik art. Fun activity. Take home your creation!</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
