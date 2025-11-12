@@ -65,8 +65,10 @@ const BookingForm = () => {
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="Odopa">Odopa - $71/night</SelectItem>
-                      <SelectItem value="garden">Garden Villa - $95/night</SelectItem>
-                      <SelectItem value="beach">Beachfront Cottage - $150/night</SelectItem>
+                      <SelectItem value="Ahoto">Ahoto - $71/night</SelectItem>
+                      <SelectItem value="Hwebi">Hwebi - $69/night</SelectItem>
+                      <SelectItem value="Ebusua">Ebusua - $55/night</SelectItem>
+                      <SelectItem value="Akyedi">Akyedi - $45/night</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
