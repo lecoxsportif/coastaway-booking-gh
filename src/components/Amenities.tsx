@@ -58,12 +58,13 @@ const Amenities = () => {
         })}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 items-center">
+        <div className="grid md:grid-cols-2 gap-8 items-start">
           <div>
-            <img src={breakfastImage} alt="Fresh breakfast spread" className="rounded-lg shadow-elevated w-full h-full object-cover" />
           </div>
           
           <div className="space-y-6">
+            <img src={breakfastImage} alt="Fresh breakfast spread" className="rounded-lg shadow-elevated w-full h-full object-cover" />
+            
             <h2 className="text-4xl md:text-5xl text-foreground">Local Experiences</h2>
             
             <p className="text-muted-foreground text-lg">
