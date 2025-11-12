@@ -133,6 +133,7 @@ const BookingForm = () => {
                     <SelectItem value="2">2 Guests</SelectItem>
                     <SelectItem value="3">3 Guests</SelectItem>
                     <SelectItem value="4">4 Guests</SelectItem>
+                    <SelectItem value="5">5 Guests</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
