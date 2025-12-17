@@ -1,0 +1,203 @@
+openapi: 3.0.0
+info:
+  title: Coastaway Booking API
+  description: API for the Coastaway Booking application, serving room data, amenities, and handling bookings.
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000/api
+    description: Local development server
+
+paths:
+  /rooms:
+    get:
+      summary: Get all rooms
+      description: Returns a list of all available rooms with their details.
+      operationId: getRooms
+      responses:
+        '200':
+          description: A list of rooms
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Room'
+
+  /amenities:
+    get:
+      summary: Get all amenities
+      description: Returns a list of resort amenities and activities.
+      operationId: getAmenities
+      responses:
+        '200':
+          description: A list of amenities
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Amenity'
+
+  /restaurant:
+    get:
+      summary: Get restaurant information
+      description: Returns restaurant features and menu highlights.
+      operationId: getRestaurantInfo
+      responses:
+        '200':
+          description: Restaurant information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestaurantInfo'
+
+  /bookings:
+    post:
+      summary: Create a booking request
+      description: Submits a new booking request.
+      operationId: createBooking
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BookingRequest'
+      responses:
+        '201':
+          description: Booking created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Booking Request Received!"
+                  id:
+                    type: string
+                    example: "12345"
+        '400':
+          description: Invalid input
+
+components:
+  schemas:
+    Room:
+      type: object
+      required:
+        - id
+        - name
+        - description
+        - price
+        - capacity
+        - features
+      properties:
+        id:
+          type: integer
+          example: 1
+        name:
+          type: string
+          example: "Odopa"
+        description:
+          type: string
+        price:
+          type: number
+          format: float
+          description: Price per night
+          example: 71.00
+        capacity:
+          type: integer
+          description: Max number of guests
+          example: 3
+        image:
+          type: string
+          format: uri
+          description: URL to the room image
+        features:
+          type: array
+          items:
+            type: string
+          example: ["Four Poster King-Size Bed", "Sea View"]
+
+    Amenity:
+      type: object
+      required:
+        - title
+        - description
+      properties:
+        title:
+          type: string
+          example: "Beach Access"
+        description:
+          type: string
+          example: "Direct access to pristine beach."
+        icon:
+          type: string
+          description: Name of the icon identifier (e.g., Lucide icon name)
+          example: "TreePalm"
+
+    RestaurantInfo:
+      type: object
+      properties:
+        features:
+          type: array
+          items:
+            $ref: '#/components/schemas/RestaurantFeature'
+        highlights:
+          type: array
+          items:
+            type: string
+          example: ["Steak and caramelized onion sandwich", "Pizza"]
+
+    RestaurantFeature:
+      type: object
+      properties:
+        title:
+          type: string
+          example: "Vegan Specialties"
+        description:
+          type: string
+          example: "We specialize in vegan food."
+        icon:
+          type: string
+          example: "Leaf"
+
+    BookingRequest:
+      type: object
+      required:
+        - name
+        - email
+        - phone
+        - roomType
+        - checkIn
+        - checkOut
+        - guests
+      properties:
+        name:
+          type: string
+          example: "John Doe"
+        email:
+          type: string
+          format: email
+          example: "john@example.com"
+        phone:
+          type: string
+          example: "+233 20 123 4567"
+        roomType:
+          type: string
+          description: The name or ID of the selected room type
+          example: "Odopa"
+        checkIn:
+          type: string
+          format: date
+          example: "2024-01-01"
+        checkOut:
+          type: string
+          format: date
+          example: "2024-01-05"
+        guests:
+          type: integer
+          example: 2
+        message:
+          type: string
+          description: Special requests
+          example: "Ground floor preferred"
