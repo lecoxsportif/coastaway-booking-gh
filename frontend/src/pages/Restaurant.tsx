@@ -5,48 +5,33 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Leaf, Fish, Pizza, Soup } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import { fetchRestaurantInfo } from "@/lib/api";
+
+const iconMap: Record<string, any> = {
+  Leaf, Fish, Pizza, Soup
+};
 
 const Restaurant = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const features = [
-    {
-      icon: Leaf,
-      title: "Vegan Specialties",
-      description: "We specialize in vegan food with a great selection of plant-based options"
-    },
-    {
-      icon: Fish,
-      title: "Fresh Seafood",
-      description: "Chargrilled fresh seafood caught locally"
-    },
-    {
-      icon: Pizza,
-      title: "International Cuisine",
-      description: "Pizza, sandwiches, and international favorites"
-    },
-    {
-      icon: Soup,
-      title: "Ghanaian Dishes",
-      description: "Authentic fufu with goat light soup and local specialties"
-    }
-  ];
+  const { data: restaurantInfo, isLoading, error } = useQuery({
+    queryKey: ["restaurant"],
+    queryFn: fetchRestaurantInfo,
+  });
 
-  const highlights = [
-    "Steak and caramelized onion sandwich",
-    "Lentil and potato stew",
-    "Pizza",
-    "Chargrilled fresh seafood",
-    "Fufu with goat light soup",
-    "Freshly squeezed juices"
-  ];
+  const features = restaurantInfo?.features || [];
+  const highlights = restaurantInfo?.highlights || [];
+
+  if (isLoading) return <div className="text-center py-20">Loading restaurant info...</div>;
+  if (error) return <div className="text-center py-20 text-red-500">Failed to load restaurant info</div>;
 
   return (
     <div className="min-h-screen">
       <Navbar />
-      
+
       <main className="pt-20">
         {/* Hero Section */}
         <section className="relative py-20 bg-gradient-to-br from-primary/10 to-accent/10">
@@ -81,7 +66,7 @@ const Restaurant = () => {
                   </p>
                 </div>
                 <div className="relative h-[400px] rounded-lg overflow-hidden shadow-elegant">
-                  <img 
+                  <img
                     src="https://static.wixstatic.com/media/8d38cf_1281cc79a2664c48837f89a080959836~mv2.jpg/v1/crop/x_0,y_290,w_1197,h_1310/fill/w_391,h_428,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/8d38cf_1281cc79a2664c48837f89a080959836~mv2.jpg"
                     alt="Food cooked to order at Afiki beach restaurant"
                     className="w-full h-full object-cover"
@@ -98,15 +83,18 @@ const Restaurant = () => {
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold mb-12 text-center text-foreground">What We Offer</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {features.map((feature, index) => (
-                  <Card key={index} className="border-border bg-card hover:shadow-soft transition-smooth">
-                    <CardContent className="p-6 text-center">
-                      <feature.icon className="w-12 h-12 mx-auto mb-4 text-primary" />
-                      <h3 className="text-xl font-semibold mb-2 text-foreground">{feature.title}</h3>
-                      <p className="text-muted-foreground text-sm">{feature.description}</p>
-                    </CardContent>
-                  </Card>
-                ))}
+                {features.map((feature, index) => {
+                  const Icon = iconMap[feature.icon] || Leaf;
+                  return (
+                    <Card key={index} className="border-border bg-card hover:shadow-soft transition-smooth">
+                      <CardContent className="p-6 text-center">
+                        <Icon className="w-12 h-12 mx-auto mb-4 text-primary" />
+                        <h3 className="text-xl font-semibold mb-2 text-foreground">{feature.title}</h3>
+                        <p className="text-muted-foreground text-sm">{feature.description}</p>
+                      </CardContent>
+                    </Card>
+                  )
+                })}
               </div>
             </div>
           </div>
@@ -118,7 +106,7 @@ const Restaurant = () => {
             <div className="max-w-6xl mx-auto">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="relative h-[400px] rounded-lg overflow-hidden shadow-elegant">
-                  <img 
+                  <img
                     src="https://static.wixstatic.com/media/8d38cf_87436e02e37b4fdc915efe110371ef23~mv2.jpg/v1/fill/w_391,h_293,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/8d38cf_87436e02e37b4fdc915efe110371ef23~mv2.jpg"
                     alt="Afiki beach restaurant offers delicious home made food catering to all dietary requirements"
                     className="w-full h-full object-cover"
@@ -154,7 +142,7 @@ const Restaurant = () => {
               <Link to="/">
                 <Button className="bg-primary text-primary-foreground hover:opacity-90">
                   Book Your Table
-                  </Button>
+                </Button>
               </Link>
             </div>
           </div>

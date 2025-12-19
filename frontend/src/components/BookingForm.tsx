@@ -9,19 +9,56 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { CalendarIcon } from "lucide-react";
 import { format } from "date-fns";
 import { useToast } from "@/hooks/use-toast";
+import { useMutation } from "@tanstack/react-query";
+import { createBooking } from "@/lib/api";
 
 const BookingForm = () => {
   const [checkIn, setCheckIn] = useState<Date>();
   const [checkOut, setCheckOut] = useState<Date>();
+  const [roomType, setRoomType] = useState<string>("");
+  const [guests, setGuests] = useState<string>("");
+
   const { toast } = useToast();
+
+  const mutation = useMutation({
+    mutationFn: createBooking,
+    onSuccess: (data) => {
+      toast({
+        title: data.message, // "Booking Request Received!"
+        description: `Reference ID: ${data.id}. We'll contact you shortly.`,
+      });
+    },
+    onError: () => {
+      toast({
+        title: "Booking Failed",
+        description: "There was a problem submitting your request. Please try again.",
+        variant: "destructive",
+      });
+    }
+  });
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
-    // For now, just show a toast. We'll connect to Cloud backend later
-    toast({
-      title: "Booking Request Received!",
-      description: "We'll contact you shortly to confirm your reservation.",
+    if (!checkIn || !checkOut || !roomType || !guests) {
+      toast({
+        title: "Missing Information",
+        description: "Please fill in all required fields including dates and room selection.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    const formData = new FormData(e.currentTarget);
+
+    mutation.mutate({
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      phone: formData.get("phone") as string,
+      roomType: roomType,
+      checkIn: format(checkIn, "yyyy-MM-dd"),
+      checkOut: format(checkOut, "yyyy-MM-dd"),
+      guests: parseInt(guests),
+      message: formData.get("message") as string || undefined
     });
   };
 
@@ -44,22 +81,22 @@ const BookingForm = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Full Name</Label>
-                  <Input id="name" placeholder="John Doe" required />
+                  <Input id="name" name="name" placeholder="John Doe" required />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email">E-mail</Label>
-                  <Input id="email" type="email" placeholder="john@example.com" required />
+                  <Input id="email" name="email" type="email" placeholder="john@example.com" required />
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="phone">Phone Number</Label>
-                  <Input id="phone" type="tel" placeholder="+233 XX XXX XXXX" required />
+                  <Input id="phone" name="phone" type="tel" placeholder="+233 XX XXX XXXX" required />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="room">Room Type</Label>
-                  <Select required>
+                  <Select required value={roomType} onValueChange={setRoomType}>
                     <SelectTrigger id="room">
                       <SelectValue placeholder="Select a room" />
                     </SelectTrigger>
@@ -124,7 +161,7 @@ const BookingForm = () => {
 
               <div className="space-y-2">
                 <Label htmlFor="guests">Number of Guests</Label>
-                <Select required>
+                <Select required value={guests} onValueChange={setGuests}>
                   <SelectTrigger id="guests">
                     <SelectValue placeholder="Select guests" />
                   </SelectTrigger>
@@ -142,15 +179,17 @@ const BookingForm = () => {
                 <Label htmlFor="message">Special Requests (Optional)</Label>
                 <Input
                   id="message"
+                  name="message"
                   placeholder="Any special requirements or requests?"
                 />
               </div>
 
               <Button
                 type="submit"
+                disabled={mutation.isPending}
                 className="w-full bg-primary text-primary-foreground hover:opacity-90 py-6 text-lg"
               >
-                Submit Booking Request
+                {mutation.isPending ? "Submitting..." : "Submit Booking Request"}
               </Button>
 
               <p className="text-sm text-muted-foreground text-center">

@@ -1,0 +1,14 @@
+{
+    "name": "coastaway-booking-root",
+    "version": "1.0.0",
+    "description": "Root package for Coastaway Booking",
+    "scripts": {
+        "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+        "start": "npm run dev",
+        "backend": "cd backend && make run",
+        "frontend": "npm run dev --prefix frontend"
+    },
+    "devDependencies": {
+        "concurrently": "^9.1.2"
+    }
+}
