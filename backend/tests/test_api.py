@@ -44,5 +44,16 @@ def test_create_booking():
     response = client.post("/api/bookings", json=payload)
     assert response.status_code == 201
     data = response.json()
-    assert data["message"] == "Booking Request Received!"
+    assert data["message"] == "Booking request received successfully"
     assert "id" in data
+
+def test_read_bookings():
+    response = client.get("/api/bookings")
+    assert response.status_code == 200
+    data = response.json()
+    assert isinstance(data, list)
+    # We expect at least the booking created in test_create_booking to be there
+    # or the ones from manual curl tests if using the same DB file.
+    if len(data) > 0:
+        assert "id" in data[0]
+        assert "name" in data[0]

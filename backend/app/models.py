@@ -1,35 +1,42 @@
-from typing import List, Optional
-from pydantic import BaseModel, EmailStr
+from sqlalchemy import Column, Integer, String, Float, JSON, Text, Boolean
+from .database import Base
 
-class Room(BaseModel):
-    id: int
-    name: str
-    description: str
-    price: float
-    capacity: int
-    image: Optional[str] = None
-    features: List[str]
+class Room(Base):
+    __tablename__ = "rooms"
 
-class Amenity(BaseModel):
-    title: str
-    description: str
-    icon: str
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, index=True)
+    description = Column(String)
+    price = Column(Float)
+    capacity = Column(Integer)
+    image = Column(String)
+    features = Column(JSON)
 
-class RestaurantFeature(BaseModel):
-    title: str
-    description: str
-    icon: str
+class Amenity(Base):
+    __tablename__ = "amenities"
 
-class RestaurantInfo(BaseModel):
-    features: List[RestaurantFeature]
-    highlights: List[str]
+    id = Column(Integer, primary_key=True, index=True)
+    title = Column(String, index=True)
+    description = Column(String)
+    icon = Column(String)
 
-class BookingRequest(BaseModel):
-    name: str
-    email: EmailStr
-    phone: str
-    roomType: str
-    checkIn: str  # Keeping as string for simplicity in mock, validation can be added later
-    checkOut: str
-    guests: int
-    message: Optional[str] = None
+class RestaurantFeature(Base):
+    __tablename__ = "restaurant_features"
+
+    id = Column(Integer, primary_key=True, index=True)
+    title = Column(String, index=True)
+    description = Column(String)
+    icon = Column(String)
+
+class Booking(Base):
+    __tablename__ = "bookings"
+
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String)
+    email = Column(String)
+    phone = Column(String)
+    roomType = Column(String) # Matching frontend/schema field name for simplicity
+    checkIn = Column(String)  # Storing as string for simplicity, matching schema
+    checkOut = Column(String)
+    guests = Column(Integer)
+    message = Column(String, nullable=True)

@@ -1,4 +1,4 @@
-from .models import Room, Amenity, RestaurantInfo, RestaurantFeature
+from .schemas import Room, Amenity, RestaurantInfo, RestaurantFeature
 
 # Mock Data derived from frontend components
 
