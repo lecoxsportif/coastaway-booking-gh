@@ -1,9 +1,9 @@
-import { TreePalm, Waves, Handshake, Paintbrush, Drum, Ship, Utensils, Slack, PiggyBank } from "lucide-react";
+import { TreePalm, Waves, Handshake, Paintbrush, Drum, Ship, Utensils, Slack, PiggyBank, LucideIcon } from "lucide-react";
 import breakfastImage from "@/assets/amenity-breakfast.jpg";
 import { useQuery } from "@tanstack/react-query";
 import { fetchAmenities } from "@/lib/api";
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, LucideIcon> = {
   TreePalm, Waves, Handshake, Paintbrush, Drum, Ship, Utensils, Slack, PiggyBank
 };
 

@@ -3,12 +3,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Leaf, Fish, Pizza, Soup } from "lucide-react";
+import { Leaf, Fish, Pizza, Soup, LucideIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { fetchRestaurantInfo } from "@/lib/api";
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, LucideIcon> = {
   Leaf, Fish, Pizza, Soup
 };
 

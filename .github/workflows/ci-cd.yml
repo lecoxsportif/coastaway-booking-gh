@@ -18,17 +18,17 @@ jobs:
         python-version: "3.12"
         
     - name: Install uv
-      run: curl -LsSf https://astral.sh/uv/install.sh | sh
+      uses: astral-sh/setup-uv@v5
 
     - name: Install Dependencies
       working-directory: backend
       run: |
-        /home/runner/.cargo/bin/uv sync
+        uv sync
         
     - name: Run Tests
       working-directory: backend
       run: |
-        /home/runner/.cargo/bin/uv run pytest tests/ tests_integration/
+        uv run pytest tests/ tests_integration/
 
   test-frontend:
     runs-on: ubuntu-latest

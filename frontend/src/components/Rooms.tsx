@@ -1,10 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Users, Waves, Leaf } from "lucide-react";
+import { Users, Waves, Leaf, LucideIcon } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { fetchRooms } from "@/lib/api";
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, LucideIcon> = {
   Waves: Waves,
   Users: Users,
   Leaf: Leaf,
