@@ -30,4 +30,4 @@ COPY --from=frontend_builder /app/frontend/dist ./static
 EXPOSE 3000
 
 # Run
-CMD ["sh", "-c", "uv run python -m app.seed && uv run uvicorn main:app --host 0.0.0.0 --port 3000"]
+CMD ["sh", "-c", "uv run python -m app.seed && uv run uvicorn main:app --host 0.0.0.0 --port ${PORT:-10000}"]
