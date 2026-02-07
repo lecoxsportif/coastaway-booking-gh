@@ -1,4 +1,4 @@
-#CoastAway Booking Platform
+<h1>CoastAway Booking Platform
 
 
 
