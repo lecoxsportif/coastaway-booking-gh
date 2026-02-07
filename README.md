@@ -2,7 +2,7 @@
 
 
 
-CoastAway Booking is a full-stack accommodation booking platform designed for small coastal retreat operators.
+<p>CoastAway Booking is a full-stack accommodation booking platform designed for small coastal retreat operators.
 It enables guests to browse listings and make bookings while giving property owners a simple admin dashboard for availability management.
 
 This repo contains:
