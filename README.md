@@ -1,8 +1,8 @@
-<h1>CoastAway Booking Platform
+CoastAway Booking Platform
 
 
 
-<p>CoastAway Booking is a full-stack accommodation booking platform designed for small coastal retreat operators.
+CoastAway Booking is a full-stack accommodation booking platform designed for small coastal retreat operators.
 It enables guests to browse listings and make bookings while giving property owners a simple admin dashboard for availability management.
 
 This repo contains:
@@ -21,7 +21,7 @@ End-to-end Dockerized environment
 
 The project was built using AI-assisted workflows, ensuring a consistent and contract-driven process across all layers.
 
-##🧭 Table of Contents
+🧭 Table of Contents
 
 Problem Description
 
@@ -55,7 +55,7 @@ Contributing
 
 License
 
-##🚧 Problem Description
+🚧 Problem Description
 
 Small coastal retreats often rely on spreadsheets or messaging apps to coordinate bookings, which results in:
 
@@ -83,8 +83,8 @@ Database-backed reservation logic
 
 Cloud deployment-ready system
 
-##🤖 AI-Assisted Development Workflow
-##✨ Tools Involved
+🤖 AI-Assisted Development Workflow
+✨ Tools Involved
 
 AI was used throughout development using:
 
@@ -98,7 +98,7 @@ Auto-scaffolding unit and integration tests
 
 Dockerfile and CI workflow generation
 
-##💡 Workflow Summary
+💡 Workflow Summary
 
 Frontend requirements defined
 
@@ -114,7 +114,7 @@ Deployment pipeline produced
 
 All AI output was manually reviewed and adjusted.
 
-##🏗 Technologies & Architecture
+🏗 Technologies & Architecture
 Frontend
 
 React + TypeScript
@@ -153,7 +153,7 @@ GitHub Actions CI/CD
 
 Cloud provider (Render)
 
-##🗺 Architecture Diagram
+🗺 Architecture Diagram
                         ┌──────────────────────────┐
                         │        Frontend          │
                         │  React + TS + Zustand     │
@@ -178,7 +178,7 @@ Cloud provider (Render)
                       │  GitHub Actions + Render │
                       └──────────────────────────┘
 
-##🎨 Frontend
+🎨 Frontend
 Features
 
 Browse listings
@@ -201,7 +201,7 @@ npm run dev
 Frontend Tests
 npm run test
 
-##🧩 Backend
+🧩 Backend
 
 Backend follows the OpenAPI spec exactly.
 
@@ -225,7 +225,7 @@ npm run dev
 Backend Tests
 npm run test
 
-##📜 OpenAPI Spec
+📜 OpenAPI Spec
 
 The entire API lives in:
 
@@ -246,7 +246,7 @@ Generate client types:
 
 npm run generate:api
 
-##🗄️ Database Integration
+🗄️ Database Integration
 Supported Environments
 Environment	Database
 Development	SQLite
@@ -262,7 +262,7 @@ DATABASE_URL="file:./dev.db"
 # or
 DATABASE_URL="postgresql://..."
 
-##🐳 Containerization
+🐳 Containerization
 
 Run everything:
 
@@ -317,7 +317,7 @@ Build logs
 
 CI/CD workflow artifacts
 
-##🔄 CI/CD
+🔄 CI/CD
 
 Configured via GitHub Actions:
 
@@ -339,7 +339,7 @@ Workflow file:
 
 .github/workflows/ci.yml
 
-##🔁 Reproducibility
+🔁 Reproducibility
 1. Clone
 git clone https://github.com/lecoxsportif/coastaway-booking-gh
 cd coastaway-booking-gh
